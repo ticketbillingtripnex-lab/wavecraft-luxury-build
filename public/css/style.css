@@ -158,19 +158,21 @@ section { position: relative; padding: 140px 0; }
 
 /* 5. NAVBAR ------------------------------------------------------------ */
 .navbar {
-  position: fixed; inset: 14px 16px auto 16px; z-index: 100;
-  padding: 10px 0; border-radius: 999px;
-  background: transparent; border: 1px solid transparent;
-  transition: transform 0.6s var(--ease), background 0.5s var(--ease),
-    box-shadow 0.5s var(--ease), border-color 0.5s var(--ease), padding 0.4s var(--ease);
+  position: fixed; top: 18px; left: 50%; transform: translateX(-50%);
+  z-index: 100; width: min(960px, calc(100% - 40px));
+  padding: 14px 24px; border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(15, 45, 75, 0.08);
+  box-shadow: 0 18px 38px rgba(0, 15, 40, 0.08);
+  transition: transform 0.4s var(--ease), opacity 0.4s var(--ease);
 }
 .navbar.scrolled {
-  background: rgba(255, 255, 255, 0.62);
-  backdrop-filter: blur(28px) saturate(160%);
-  border-color: rgba(255, 255, 255, 0.7);
-  box-shadow: 0 20px 50px -22px rgba(5, 60, 94, 0.35), var(--shadow-glass);
+  /* no extra background change needed */
 }
-.navbar.hidden { transform: translateY(-140%); }
+.navbar.hidden {
+  transform: translate(-50%, -160%);
+  opacity: 0;
+}
 
 .nav-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
 .nav-logo img { height: 76px; width: auto; transition: transform 0.5s var(--ease); }
@@ -247,8 +249,8 @@ section { position: relative; padding: 140px 0; }
 }
 .hero-content .eyebrow { color: var(--turquoise); }
 .hero-content h1 {
-  margin: 0 0 26px; font-size: clamp(2.6rem, 4.4vw, 4.8rem);
-  line-height: 1.0; font-weight: 700; color: #fff; text-shadow: 0 30px 60px rgba(2, 22, 40, 0.5);
+  margin: 0 0 26px; font-size: clamp(2.2rem, 4vw, 4.2rem);
+  line-height: 1.02; font-weight: 700; color: #fff; text-shadow: 0 30px 60px rgba(2, 22, 40, 0.5);
 }
 .hero-content p, .hero-sub { color: rgba(245, 253, 255, 0.92); margin-bottom: 32px; }
 .hero-sub { display: grid; gap: 6px; font-size: 1.05rem; }

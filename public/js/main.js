@@ -4,12 +4,14 @@
    Plain ES6. No libraries.
    ========================================================================== */
 
-// --- Sticky navbar: add a glass background after scrolling -----------------
+// --- Navbar hide on hero scroll ----------------------------------------
 const navbar = document.querySelector(".navbar");
+const hero = document.querySelector(".hero");
 
 function handleScroll() {
   if (!navbar) return;
-  navbar.classList.toggle("scrolled", window.scrollY > 40);
+  const heroVisible = hero ? hero.getBoundingClientRect().bottom > 70 : false;
+  navbar.classList.toggle("hidden", heroVisible);
 }
 window.addEventListener("scroll", handleScroll);
 handleScroll();
