@@ -192,7 +192,7 @@ section { position: relative; padding: 140px 0; }
   align-items: center;
 }
 .logo img {
-  height: 52px;
+  height: 70px;
   filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
 }
 .nav-menu {
