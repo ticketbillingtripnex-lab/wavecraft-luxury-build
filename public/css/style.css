@@ -396,7 +396,7 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
 
 /* 9. GALLERY / SHOWCASE ------------------------------------------------ */
 .gallery-shell {
-  display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 30px; align-items: stretch;
+  display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 30px; align-items: start;
   margin-bottom: 26px;
 }
 .gallery-panel {
