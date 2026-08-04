@@ -232,8 +232,7 @@ section { position: relative; padding: 140px 0; }
   border-color: #9BE7FF;
 }
 .navbar.hidden {
-  transform: translateY(-140%);
-  opacity: 0;
+  transform: translateY(-100%);
 }
 .nav-toggle { display: none; background: none; border: 0; cursor: pointer; }
 .nav-toggle span {
