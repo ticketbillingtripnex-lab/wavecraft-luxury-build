@@ -69,6 +69,7 @@
       <div class="container">
         <div class="gallery-shell fade-in">
           <div class="slider">
+            <div class="slider-viewport">
             <div class="slider-track">
               <img src="assets/gallery/image1.jpg" alt="Wake of a WaveCraft hull in turquoise water" loading="lazy" />
               <img src="assets/gallery/image2.jpg" alt="Stainless deck fitting on polished gelcoat" loading="lazy" />
@@ -77,13 +78,19 @@
               <img src="assets/boats/boat1.jpg" alt="Wave Series transfer boat at rest" loading="lazy" />
               <img src="assets/projects/project1.jpg" alt="Arrival at a resort jetty" loading="lazy" />
             </div>
+            </div>
             <button class="slider-btn slider-prev" aria-label="Previous image">&#8249;</button>
             <button class="slider-btn slider-next" aria-label="Next image">&#8250;</button>
           </div>
-          <div class="gallery-panel">
-            <span class="eyebrow">Clay-morph gallery</span>
-            <h3>Soft motion, sculpted depth, and a cinematic next-image flow.</h3>
-            <p>Every tap or click glides through the collection with a tactile, parallax-like drift that feels more like a curated reveal than a simple slideshow.</p>
+          <div class="gallery-panel" data-spec-panel>
+            <span class="eyebrow" data-spec-eyebrow>Wave Series</span>
+            <h3 data-spec-title>WaveCraft 42 Lagoon Transfer</h3>
+            <p data-spec-copy>Hand-laminated deep-V hull tuned for the Thaa Atoll crossing — quiet at cruise, dry in a chop, finished to resort standard.</p>
+            <ul class="spec-grid" data-spec-list></ul>
+            <div class="spec-gauge">
+              <small>Top speed</small>
+              <div class="gauge-rail"><i class="gauge-fill" data-gauge></i></div>
+            </div>
           </div>
         </div>
         <div class="thumbs fade-in">
