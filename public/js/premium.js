@@ -184,7 +184,7 @@
   /* --- 8. Magnetic luxury buttons ---------------------------------------- */
   function magneticButtons() {
     if (reduced) return;
-    document.querySelectorAll(".btn, .slider-btn").forEach((btn) => {
+    document.querySelectorAll(".btn").forEach((btn) => {
       btn.addEventListener("mousemove", (e) => {
         const r = btn.getBoundingClientRect();
         const x = (e.clientX - r.left - r.width / 2) * 0.18;
@@ -214,10 +214,6 @@
     splitHeadings();
     autoReveal();
     dividers();
-    // Parallax hooks on media
-    document.querySelectorAll(".split img, .card-media img, .zoom-wrap img").forEach((img) => {
-      if (!img.dataset.parallax) img.dataset.parallax = "0.05";
-    });
     collectParallax();
     navBehaviour();
     tiltable();
