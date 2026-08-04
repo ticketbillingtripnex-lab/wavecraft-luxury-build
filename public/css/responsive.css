@@ -21,31 +21,14 @@
   .metric-grid { grid-template-columns: repeat(2, 1fr); }
   .logo-strip { grid-template-columns: repeat(3, 1fr); }
 
-  /* Mobile navigation */
   .nav-toggle { display: block; }
-  .navbar { padding: 8px 0; }
-  .navbar:not(.scrolled) {
-    background: rgba(255, 255, 255, 0.14);
-    border-color: rgba(255, 255, 255, 0.28);
-    backdrop-filter: blur(18px);
-  }
-  .nav-links {
-    position: absolute;
-    top: calc(100% + 10px); left: 8px; right: 8px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 24px 28px;
-    border-radius: 28px;
-    background: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(28px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.8);
-    box-shadow: 0 30px 70px -30px rgba(5, 60, 94, 0.5);
-    display: none;
-  }
-  .nav-links.open { display: flex; animation: fadeScale 0.45s cubic-bezier(0.16, 0.84, 0.24, 1) both; }
-  .navbar:not(.scrolled) .nav-links a { color: var(--deep); text-shadow: none; }
-  .nav-links a { font-size: 0.95rem; padding: 10px 0; }
+  .navbar { min-height: 78px; }
+  .nav-inner { padding: 0 24px; }
+  .nav-links { display: none; gap: 24px; }
+  .nav-logo img { height: 34px; }
+  .nav-brand-text { font-size: 0.65rem; letter-spacing: 5px; }
+  .nav-links a { font-size: 14px; }
+  .btn-nav { height: 40px; padding: 0 28px; font-size: 14px; }
 }
 
 /* Tablet */
@@ -60,6 +43,11 @@
   .metric-grid { grid-template-columns: 1fr 1fr; }
   .glass-card, .gallery-panel { padding: 30px; }
   [data-tilt] { transform: none !important; }
+
+  .navbar { min-height: 78px; }
+  .nav-inner { gap: 18px; padding: 0 20px; }
+  .nav-links { gap: 20px; }
+  .nav-logo img { height: 32px; }
 }
 
 /* Mobile */
@@ -79,4 +67,11 @@
   .slider-next { right: 12px; }
   .logo-strip { grid-template-columns: repeat(2, 1fr); }
   .particles { display: none; }
+
+  .navbar { min-height: 68px; }
+  .nav-inner { flex-wrap: wrap; justify-content: center; padding: 0 18px; }
+  .nav-links { width: 100%; justify-content: center; gap: 16px; }
+  .nav-link, .nav-links a { font-size: 13px; }
+  .nav-right-group { order: 3; width: 100%; justify-content: center; gap: 14px; margin-top: 8px; }
+  .btn-nav { width: auto; padding: 0 24px; font-size: 13px; height: 38px; }
 }
