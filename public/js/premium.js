@@ -164,7 +164,7 @@
   function heroDepth() {
     if (reduced) return;
     const hero = document.querySelector(".hero");
-    if (!hero) return;
+    if (!hero || hero.classList.contains("hero--stable")) return;
     const media = hero.querySelector(".hero-media");
     const content = hero.querySelector(".hero-content");
     hero.addEventListener("mousemove", (e) => {
