@@ -12,25 +12,20 @@ let scrollTicking = false;
 function onNavbarScroll() {
   if (!navbar) return;
   const y = window.scrollY || 0;
-  // scrolled background/blur after 80px
   navbar.classList.toggle("scrolled", y > 80);
 
-  // If a mobile menu is open, do not auto-hide
-  const menuOpen = navbar.querySelector(".nav-links.open");
+  const menuOpen = navbar.querySelector(".nav-menu.open");
   if (!menuOpen) {
     if (y > lastScrollY && y > 80) {
-      // scrolling down
-      navbar.classList.add("hidden");
+      navbar.classList.add("hide-navbar");
     } else if (y < lastScrollY) {
-      // scrolling up
-      navbar.classList.remove("hidden");
+      navbar.classList.remove("hide-navbar");
     }
   }
 
-  // At top of page keep it fully transparent and visible
   if (y === 0) {
     navbar.classList.remove("scrolled");
-    navbar.classList.remove("hidden");
+    navbar.classList.remove("hide-navbar");
   }
 
   lastScrollY = y;
@@ -55,18 +50,18 @@ onNavbarScroll();
 
 // --- Mobile menu toggle ----------------------------------------------------
 const navToggle = document.querySelector(".nav-toggle");
-const navLinks = document.querySelector(".nav-links");
+const navMenu = document.querySelector(".nav-menu");
 
-if (navToggle && navLinks) {
-  navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
-  navLinks.addEventListener("click", (e) => {
-    if (e.target.tagName === "A") navLinks.classList.remove("open");
+if (navToggle && navMenu) {
+  navToggle.addEventListener("click", () => navMenu.classList.toggle("open"));
+  navMenu.addEventListener("click", (e) => {
+    if (e.target.tagName === "A") navMenu.classList.remove("open");
   });
 }
 
 // --- Highlight the current page in the menu --------------------------------
 const currentPage = location.pathname.split("/").pop() || "index.html";
-document.querySelectorAll(".nav-links a").forEach((link) => {
+document.querySelectorAll(".nav-menu a").forEach((link) => {
   if (link.getAttribute("href") === currentPage) link.classList.add("active");
 });
 
