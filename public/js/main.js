@@ -4,17 +4,54 @@
    Plain ES6. No libraries.
    ========================================================================== */
 
-// --- Navbar hide on hero scroll ----------------------------------------
+// --- Navbar: premium auto-hide + scrolled background -------------------
 const navbar = document.querySelector(".navbar");
-const hero = document.querySelector(".hero");
+let lastScrollY = window.scrollY || 0;
+let scrollTicking = false;
 
-function handleScroll() {
+function onNavbarScroll() {
   if (!navbar) return;
-  const heroVisible = hero ? hero.getBoundingClientRect().bottom > 70 : false;
-  navbar.classList.toggle("hidden", heroVisible);
+  const y = window.scrollY || 0;
+  // scrolled background/blur after 80px
+  navbar.classList.toggle("scrolled", y > 80);
+
+  // If a mobile menu is open, do not auto-hide
+  const menuOpen = navbar.querySelector(".nav-links.open");
+  if (!menuOpen) {
+    if (y > lastScrollY && y > 80) {
+      // scrolling down
+      navbar.classList.add("hidden");
+    } else if (y < lastScrollY) {
+      // scrolling up
+      navbar.classList.remove("hidden");
+    }
+  }
+
+  // At top of page keep it fully transparent and visible
+  if (y === 0) {
+    navbar.classList.remove("scrolled");
+    navbar.classList.remove("hidden");
+  }
+
+  lastScrollY = y;
 }
-window.addEventListener("scroll", handleScroll);
-handleScroll();
+
+window.addEventListener(
+  "scroll",
+  () => {
+    if (!scrollTicking) {
+      scrollTicking = true;
+      window.requestAnimationFrame(() => {
+        onNavbarScroll();
+        scrollTicking = false;
+      });
+    }
+  },
+  { passive: true }
+);
+
+// Initial state
+onNavbarScroll();
 
 // --- Mobile menu toggle ----------------------------------------------------
 const navToggle = document.querySelector(".nav-toggle");
