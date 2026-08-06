@@ -461,11 +461,6 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
 }
 .card-media img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s var(--ease); }
 .card:hover .card-media img { transform: scale(1.08); }
-.hero-media::after,
-.hero-media::before {
-  content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
-  background: none;
-}
 
 
 .glass-card {
