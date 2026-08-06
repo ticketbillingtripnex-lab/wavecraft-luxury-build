@@ -606,8 +606,8 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
 .slider-track img.leaving { opacity: 0; transform: scale(1.06) translateX(-4%) rotateY(-6deg); filter: blur(14px); }
 
 .slider-btn {
-  position: absolute; top: 50%; z-index: 4; transform: translateY(-50%);
-  width: 58px; height: 58px; border-radius: 50%;
+  position: absolute; top: auto; bottom: 24px; z-index: 8; transform: none;
+  width: 54px; height: 54px; border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.75);
   background: rgba(255, 255, 255, 0.42);
   backdrop-filter: blur(18px) saturate(160%);
@@ -615,9 +615,9 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
   box-shadow: 0 20px 40px -18px rgba(5, 60, 94, 0.6), var(--shadow-glass);
   transition: background 0.4s var(--ease), transform 0.5s var(--ease-lux);
 }
-.slider-btn:hover { background: #fff; transform: translateY(-50%) scale(1.08); }
+.slider-btn:hover { background: #fff; transform: scale(1.08); }
 .slider-prev { left: 24px; }
-.slider-next { right: 24px; }
+.slider-next { left: 88px; right: auto; }
 
 .thumbs { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
 .thumbs img {

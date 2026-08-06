@@ -64,7 +64,7 @@
   .footer { padding: 90px 0 30px; }
   .slider-btn { width: 46px; height: 46px; }
   .slider-prev { left: 12px; }
-  .slider-next { right: 12px; }
+  .slider-next { left: 68px; }
   .logo-strip { grid-template-columns: repeat(2, 1fr); }
   .particles { display: none; }
 
