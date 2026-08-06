@@ -756,3 +756,25 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
   box-shadow: var(--shadow-soft);
   font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
 }
+
+
+/* 14. COMPACT CTA BAND -------------------------------------------------- */
+.cta-band { padding: 64px 0 76px; }
+.cta-strip {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+  padding: 30px 36px; border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, rgba(255,255,255,0.78), rgba(232,246,251,0.55));
+  backdrop-filter: blur(26px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.85);
+  box-shadow: 0 34px 70px -42px rgba(5,60,94,0.7), inset 0 1px 0 rgba(255,255,255,0.95);
+}
+.cta-copy { max-width: 60ch; }
+.cta-copy h2 { font-size: clamp(1.35rem, 2.1vw, 1.85rem); margin: 6px 0 6px; }
+.cta-copy p { font-size: 0.9rem; margin: 0; }
+.cta-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+@media (max-width: 820px) {
+  .cta-band { padding: 48px 0 56px; }
+  .cta-strip { padding: 26px; }
+  .cta-actions .btn { flex: 1 1 auto; justify-content: center; }
+}
