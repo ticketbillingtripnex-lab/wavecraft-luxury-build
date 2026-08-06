@@ -44,70 +44,61 @@
       </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-media">
-        <video autoplay muted loop playsinline poster="assets/videos/hero-poster.jpg">
-          <source src="assets/videos/myvideo.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div class="container hero-content">
-        <span class="eyebrow rise">Gallery</span>
-        <h1 class="rise rise-2">The yard, the details, the water.</h1>
-        <div class="hero-sub rise rise-3">
-          <span>Click any image for a fullscreen view.</span>
-          <span>Use the arrows or your keyboard to move between photographs.</span>
-        </div>
-        <div class="hero-actions rise rise-4">
-          <a class="btn btn-primary" href="fleet.html">Explore Fleet</a>
-          <a class="btn btn-glass" href="contact.html">Contact Us</a>
-        </div>
-      </div>
-    </section>
-
-    <section>
+    <section class="gallery-showcase">
       <div class="container">
-        <div class="gallery-shell fade-in">
-          <div class="slider">
-            <div class="slider-viewport">
-            <div class="slider-track">
-              <img src="assets/gallery/image1.jpg" alt="Wake of a WaveCraft hull in turquoise water" loading="lazy" />
-              <img src="assets/gallery/image2.jpg" alt="Stainless deck fitting on polished gelcoat" loading="lazy" />
-              <img src="assets/gallery/image3.jpg" alt="Air-conditioned passenger cabin interior" loading="lazy" />
-              <img src="assets/gallery/image4.jpg" alt="Helm station with digital displays" loading="lazy" />
-              <img src="assets/boats/boat1.jpg" alt="Wave Series transfer boat at rest" loading="lazy" />
-              <img src="assets/projects/project1.jpg" alt="Arrival at a resort jetty" loading="lazy" />
-            </div>
-            </div>
-            <button class="slider-btn slider-prev" aria-label="Previous image">&#8249;</button>
-            <button class="slider-btn slider-next" aria-label="Next image">&#8250;</button>
+        <div class="gallery-card">
+          <div class="gallery-head">
+            <a class="gallery-back" href="fleet.html">
+              <span class="gallery-back-icon" aria-hidden="true">&#8592;</span>
+              Our Fleet
+            </a>
+            <button class="gallery-next" aria-label="Next model">&#8250;</button>
           </div>
-          <div class="gallery-panel" data-spec-panel>
-            <span class="eyebrow" data-spec-eyebrow>Wave Series</span>
-            <h3 data-spec-title>WaveCraft 42 Lagoon Transfer</h3>
-            <p data-spec-copy>Hand-laminated deep-V hull tuned for the Thaa Atoll crossing — quiet at cruise, dry in a chop, finished to resort standard.</p>
-            <ul class="spec-grid" data-spec-list></ul>
-            <div class="spec-gauge">
-              <small>Top speed</small>
-              <div class="gauge-rail"><i class="gauge-fill" data-gauge></i></div>
+          <div class="gallery-grid">
+            <div class="gallery-media">
+              <img src="assets/gallery/image1.jpg" alt="WaveCraft 42 luxury cabin cruiser" loading="lazy" />
+              <div class="gallery-media-overlay">
+                <span class="gallery-counter">01 / 10</span>
+              </div>
             </div>
+            <aside class="gallery-info">
+              <span class="eyebrow">Luxury Cabin Cruiser</span>
+              <h1>WAVECRAFT <span class="highlight">42</span></h1>
+              <div class="specs-grid">
+                <div class="spec-item">
+                  <strong>Length</strong>
+                  <span>12.80 m</span>
+                </div>
+                <div class="spec-item">
+                  <strong>Max speed</strong>
+                  <span>38 Knots</span>
+                </div>
+                <div class="spec-item">
+                  <strong>Beam</strong>
+                  <span>4.20 m</span>
+                </div>
+                <div class="spec-item">
+                  <strong>Engine</strong>
+                  <span>2 × 350 HP</span>
+                </div>
+                <div class="spec-item">
+                  <strong>Capacity</strong>
+                  <span>12 People</span>
+                </div>
+                <div class="spec-item">
+                  <strong>Fuel capacity</strong>
+                  <span>800 L</span>
+                </div>
+              </div>
+              <div class="gallery-actions">
+                <a class="btn btn-glass" href="#">View 360°</a>
+                <a class="btn btn-primary" href="fleet.html">Explore This Model</a>
+              </div>
+            </aside>
           </div>
-        </div>
-        <div class="thumbs fade-in">
-          <img src="assets/gallery/image1.jpg" alt="Wake of a WaveCraft hull in turquoise water thumbnail" loading="lazy" />
-          <img src="assets/gallery/image2.jpg" alt="Stainless deck fitting on polished gelcoat thumbnail" loading="lazy" />
-          <img src="assets/gallery/image3.jpg" alt="Air-conditioned passenger cabin interior thumbnail" loading="lazy" />
-          <img src="assets/gallery/image4.jpg" alt="Helm station with digital displays thumbnail" loading="lazy" />
-          <img src="assets/boats/boat1.jpg" alt="Wave Series transfer boat at rest thumbnail" loading="lazy" />
-          <img src="assets/projects/project1.jpg" alt="Arrival at a resort jetty thumbnail" loading="lazy" />
         </div>
       </div>
     </section>
-
-    <!-- Fullscreen view -->
-    <div class="lightbox">
-      <button class="lightbox-close" aria-label="Close">&times;</button>
-      <img src="" alt="" />
-    </div>
 
     <!-- ================= FOOTER ================= -->
     <footer class="footer">
