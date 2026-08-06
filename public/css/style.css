@@ -465,6 +465,8 @@ section:not(.hero) .btn-glass:hover { background: #fff; }
 .hero-media::before {
   content: ""; position: absolute; inset: 0; pointer-events: none; z-index: 0;
   background: none;
+}
+
 
 .glass-card {
   background: var(--glass-grad);
