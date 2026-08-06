@@ -237,14 +237,10 @@ if (track) {
       setTimeout(() => slider.style.setProperty("--tilt-x", "0deg"), 520);
     }
     if (panel) {
-      panel.style.transition = "none";
-      panel.style.transform = "translateY(10px) scale(.995)";
-      panel.style.filter = "blur(4px)";
-      requestAnimationFrame(() => {
-        panel.style.transition = "transform .9s cubic-bezier(.16,.84,.24,1), filter .8s ease";
-        panel.style.transform = "none";
-        panel.style.filter = "none";
-      });
+      panel.classList.remove("morphing");
+      void panel.offsetWidth; // restart the morph animation
+      panel.classList.add("morphing");
+      setTimeout(() => panel.classList.remove("morphing"), 1000);
     }
 
     renderSpecs(index);

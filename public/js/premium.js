@@ -136,7 +136,7 @@
   function tiltable() {
     if (reduced) return;
     document
-      .querySelectorAll(".card, .glass-card, .metric-card, .gallery-panel, .zoom-wrap, .split img")
+      .querySelectorAll(".card, .glass-card, .metric-card, .zoom-wrap, .split img")
       .forEach((el) => el.setAttribute("data-tilt", ""));
 
     document.querySelectorAll("[data-tilt]").forEach((el) => {
