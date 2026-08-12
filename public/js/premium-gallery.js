@@ -10,14 +10,14 @@
   if (!root) return;
 
   const BOATS = [
-    { name: "Luxury Passenger Boat", model: "WAVECRAFT 42", speed: "38 Knots", length: "12.80 m", capacity: "12 Passengers", engine: "2 × Yamaha 350HP", fuel: "800 L", beam: "4.20 m", category: "Luxury Cabin Cruiser", image: "/__l5e/assets-v1/91d76316-fec7-44da-877d-ad3898825aea/image1.jpg" },
-    { name: "Inter-Island Ferry", model: "WAVECRAFT A-65", speed: "29 Knots", length: "16.80 m", capacity: "96 Passengers", engine: "2 × Scania DI13", fuel: "2,200 L", beam: "5.20 m", category: "Passenger Ferry", image: "/__l5e/assets-v1/f1f539f5-e821-4cb2-9911-3039da57efc3/boat3.jpg" },
-    { name: "Resort Jetty Arrival", model: "WAVECRAFT 48", speed: "36 Knots", length: "13.40 m", capacity: "24 Passengers", engine: "2 × Yamaha 400HP", fuel: "900 L", beam: "4.60 m", category: "Resort Transfer", image: "/__l5e/assets-v1/62e8d799-b51d-42e0-bc6a-764e956eb1f2/project1.jpg" },
-    { name: "Expedition Charter", model: "WAVECRAFT 50", speed: "32 Knots", length: "15.20 m", capacity: "30 Passengers", engine: "2 × Volvo Penta", fuel: "1,000 L", beam: "5.00 m", category: "Luxury Charter", image: "/__l5e/assets-v1/07f478dc-d42c-435d-98e8-cba936c5ceac/project2.jpg" },
-    { name: "Interior Lounge Detail", model: "WAVECRAFT 33", speed: "28 Knots", length: "10.90 m", capacity: "14 Passengers", engine: "2 × Suzuki 250HP", fuel: "580 L", beam: "3.60 m", category: "Executive Transfer", image: "/__l5e/assets-v1/db6c610b-1825-4b8b-a75d-a8ae9bcb2683/image3.jpg" },
-    { name: "Helm & Navigation", model: "WAVECRAFT 44", speed: "37 Knots", length: "13.90 m", capacity: "16 Passengers", engine: "2 × Yamaha 320HP", fuel: "720 L", beam: "4.25 m", category: "Command Series", image: "/__l5e/assets-v1/3d771fd6-d6b6-407e-a650-b9ff2fb4c51e/image4.jpg" },
-    { name: "Luxury Island Transfer", model: "WAVECRAFT 46", speed: "35 Knots", length: "14.50 m", capacity: "20 Passengers", engine: "2 × Suzuki 350HP", fuel: "840 L", beam: "4.45 m", category: "Yacht Support", image: "/__l5e/assets-v1/bab49655-170b-4010-91f1-d35fb340bd3f/project3.jpg" },
-    { name: "WaveCraft Signature", model: "WAVECRAFT 40", speed: "33 Knots", length: "13.10 m", capacity: "18 Passengers", engine: "2 × Yamaha 320HP", fuel: "780 L", beam: "4.30 m", category: "Signature Edition", image: "/__l5e/assets-v1/7e0fea47-c5bf-40c6-85c1-17f347c1feb1/boat1.jpg" },
+    { name: "Luxury Passenger Boat", model: "WAVECRAFT 42", speed: "38 Knots", length: "12.80 m", capacity: "12 Passengers", engine: "2 × Yamaha 350HP", fuel: "800 L", beam: "4.20 m", category: "Luxury Cabin Cruiser", image: "/assets/gallery/image1.jpg" },
+    { name: "Inter-Island Ferry", model: "WAVECRAFT A-65", speed: "29 Knots", length: "16.80 m", capacity: "96 Passengers", engine: "2 × Scania DI13", fuel: "2,200 L", beam: "5.20 m", category: "Passenger Ferry", image: "/assets/boats/boat3.jpg" },
+    { name: "Resort Jetty Arrival", model: "WAVECRAFT 48", speed: "36 Knots", length: "13.40 m", capacity: "24 Passengers", engine: "2 × Yamaha 400HP", fuel: "900 L", beam: "4.60 m", category: "Resort Transfer", image: "/assets/projects/project1.jpg" },
+    { name: "Expedition Charter", model: "WAVECRAFT 50", speed: "32 Knots", length: "15.20 m", capacity: "30 Passengers", engine: "2 × Volvo Penta", fuel: "1,000 L", beam: "5.00 m", category: "Luxury Charter", image: "/assets/projects/project2.jpg" },
+    { name: "Interior Lounge Detail", model: "WAVECRAFT 33", speed: "28 Knots", length: "10.90 m", capacity: "14 Passengers", engine: "2 × Suzuki 250HP", fuel: "580 L", beam: "3.60 m", category: "Executive Transfer", image: "/assets/gallery/image3.jpg" },
+    { name: "Helm & Navigation", model: "WAVECRAFT 44", speed: "37 Knots", length: "13.90 m", capacity: "16 Passengers", engine: "2 × Yamaha 320HP", fuel: "720 L", beam: "4.25 m", category: "Command Series", image: "/assets/gallery/image4.jpg" },
+    { name: "Luxury Island Transfer", model: "WAVECRAFT 46", speed: "35 Knots", length: "14.50 m", capacity: "20 Passengers", engine: "2 × Suzuki 350HP", fuel: "840 L", beam: "4.45 m", category: "Yacht Support", image: "/assets/projects/project3.jpg" },
+    { name: "WaveCraft Signature", model: "WAVECRAFT 40", speed: "33 Knots", length: "13.10 m", capacity: "18 Passengers", engine: "2 × Yamaha 320HP", fuel: "780 L", beam: "4.30 m", category: "Signature Edition", image: "/assets/boats/boat1.jpg" },
   ];
 
   const SPECS = [
