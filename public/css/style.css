@@ -1406,3 +1406,16 @@ input:focus, textarea:focus, select:focus {
 .bg-dot.is-active { background: var(--ocean); }
 .bg-thumb { border-color: rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.5); }
 .bg-bottom { background: rgba(255, 255, 255, 0.55); border-radius: 26px; border: 1px solid rgba(255,255,255,0.8); backdrop-filter: blur(18px); }
+
+/* --- Card body: the missing padding + product hierarchy ------------------ */
+.card { display: flex; flex-direction: column; background: linear-gradient(150deg, rgba(255,255,255,0.92), rgba(200,238,244,0.34)); }
+.card-body { padding: 26px 28px 30px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.card-body .pill { align-self: flex-start; margin-bottom: 2px; }
+.card-body h3 { margin: 0; }
+.card-body p { margin: 0; font-size: 0.94rem; }
+.card-body .specs { margin-top: 12px; }
+.card-body .specs li { padding: 10px 0; font-size: 0.84rem; }
+.card-body .btn { align-self: flex-start; margin-top: 14px; }
+.card-media { margin: 0; border-radius: var(--radius-lg) var(--radius-lg) 0 0; border: 0; box-shadow: none; }
+.page-hero { padding-bottom: 56px; }
+.page-hero + section { padding-top: 64px; }
